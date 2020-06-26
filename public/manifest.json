@@ -3,12 +3,7 @@
   "background": {
     "scripts": ["background.js"],
     "persistent": false
-  }, "icons": {
-  "16": "favicon.ico",
-  "48": "logo192.png",
-  "128": "logo512.png"
-},
-  "permissions": [],
+  },
   "description": "Quick way to search many websites",
   "manifest_version": 2,
   "version" : "1.0",
