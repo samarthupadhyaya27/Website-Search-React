@@ -18,35 +18,37 @@ class SearchBox extends React.Component {
     }
 
     handleChange(event) {
-        const {name, value, type} = event.target
+        const {name, value} = event.target
         this.setState({[name]: value})
     }
     handleClick(event){
         const {name} = event.target
         let search_query = this.state[name]
-        console.log(search_query)
-        switch(name) {
-            case "Google_query":
-                let newURL = "https://www.google.com/search?q=" + search_query
-                chrome.tabs.create({url: newURL})
-                break
-            case "Amazon_query":
-                newURL = "http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=" + search_query
-                chrome.tabs.create({url: newURL})
-                break
-            case "Reddit_query":
-                newURL = "https://www.reddit.com/search/?q=" + search_query
-                chrome.tabs.create({ url: newURL })
-                break
-            case "Youtube_query":
-                newURL = "https://www.youtube.com/results?search_query=" + search_query
-                chrome.tabs.create({ url: newURL })
-                break
-            case "Google_Images_query":
-                newURL = "https://www.google.com/search?tbm=isch&q=" + search_query
-                chrome.tabs.create({ url: newURL })
-                break
+        if (search_query){
+            switch(name) {
+                case "Google_query":
+                    var newURL = "https://www.google.com/search?q=" + search_query
+                    chrome.tabs.create({url: newURL})
+                    break
+                case "Amazon_query":
+                    var newURL = "http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=" + search_query
+                    chrome.tabs.create({url: newURL})
+                    break
+                case "Reddit_query":
+                    var newURL = "https://www.reddit.com/search/?q=" + search_query
+                    chrome.tabs.create({ url: newURL })
+                    break
+                case "Youtube_query":
+                    var newURL = "https://www.youtube.com/results?search_query=" + search_query
+                    chrome.tabs.create({ url: newURL })
+                    break
+                case "Google_Images_query":
+                    var newURL = "https://www.google.com/search?tbm=isch&q=" + search_query
+                    chrome.tabs.create({ url: newURL })
+                    break
+            }
         }
+
 
     }
 
