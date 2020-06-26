@@ -1,0 +1,46 @@
+{
+  "name": "Quick Website Search",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }, "icons": {
+  "16": "favicon.ico",
+  "48": "logo192.png",
+  "128": "logo512.png"
+},
+  "permissions": [],
+  "description": "Quick way to search many websites",
+  "manifest_version": 2,
+  "version" : "1.0",
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Quick Website Search",
+    "default_icon": "icon.png"
+  },
+  "commands": {
+    "Google" : {
+      "suggested_key": {
+        "default": "Alt+G"
+      },
+      "description": "Search Google"
+    },
+    "Amazon" : {
+      "suggested_key": {
+        "default": "Alt+A"
+      },
+      "description": "Search Amazon"
+    },  "YouTube" : {
+      "suggested_key": {
+        "default": "Alt+Y"
+      },
+      "description": "Search Youtube"
+    },  "Reddit" : {
+      "description": "Search Reddit"
+    },  "Google-Images" : {
+      "suggested_key": {
+        "default": "Alt+P"
+      },
+      "description": "Search Google Images"
+    }
+  },  "content_security_policy": "script-src 'self' 'sha256-NCekAKWumQimccZbDtLrQu+zgp5KGAa+17P1ZUxT7fU='; object-src 'self'"
+}
