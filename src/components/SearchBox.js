@@ -75,7 +75,7 @@ class SearchBox extends React.Component {
 
 
                     <div className="search_button=">
-                        <input type="button"
+                        <input type="submit"
                                name={`${this.props.props.engine}_query`}
                                value="Search"
                                id={`${this.props.props.engine}_search_button`}
